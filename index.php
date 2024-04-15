@@ -37,8 +37,9 @@ $hotels = [
       'distance_to_center' => 50
   ],
 
-];
-
+]; 
+$hotels[]= 'visitors';
+var_dump($hotels);
 
 
 
