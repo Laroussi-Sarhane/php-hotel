@@ -68,7 +68,7 @@ foreach($hotels as $key=> $hotel){
 
 <div class="container mb-2 p-2 ">
 
-  <div class="row row-cols-3 flex-wrap  ">
+  <div class="row row-cols-3 flex-wrap  d-flex  ">
     <?php foreach($hotels as $hotel) {?>
   <div class="card" style="width: 18rem;">
   <div class="card-body">
