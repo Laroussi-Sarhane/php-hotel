@@ -38,9 +38,11 @@ $hotels = [
   ],
 
 ]; 
-$hotels[]= 'visitors';
-var_dump($hotels);
 
+
+foreach($hotels as $hotel){
+  echo $hotel;
+};
 
 
 ?>
@@ -55,6 +57,8 @@ var_dump($hotels);
   <title>Document</title>
 </head>
 <body>
+
+<h2><?php echo $hotels ?> vediamo</h2>
   
 </body>
 </html>
