@@ -67,15 +67,18 @@ foreach($hotels as $key=> $hotel){
 <body>
 
 <div class="container mb-2 p-2 ">
-  <div class="">
+
+  <div class="row row-cols-3 flex-wrap  ">
+    <?php foreach($hotels as $hotel) {?>
   <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title"> nome hotel:<?php echo "<h2> $name </h2>" ?></h5>
-    <p class="card-text"> descrizone hotel:<?php echo "<h2> $description </h2>" ?></p>
-    <p class="card-text"> voto hotel:<?php echo "<h2> $vote </h2>" ?></p>
-    <p class="card-text"> distanza dal centro storico:<?php echo "<h2> $distance_to_center </h2>" ?> M</p>
+    <h5 class="card-title"> nome hotel:<?php echo "<h2> $name $key </h2>" ?>  </h5>
+    <p class="card-text"> descrizone hotel:<?php echo "<h2> $description $key </h2>" ?></p>
+    <p class="card-text"> voto hotel:<?php echo "<h2> $vote $key </h2>" ?></p>
+    <p class="card-text"> distanza dal centro storico:<?php echo "<h2> $distance_to_center  </h2>" ?> M</p>
     
   </div>
+  <?php  } ?>
 </div>
 
   </div>
