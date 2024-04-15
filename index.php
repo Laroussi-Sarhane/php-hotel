@@ -40,8 +40,15 @@ $hotels = [
 ]; 
 
 
-foreach($hotels as $hotel){
-  echo $hotel;
+foreach($hotels as $key=> $hotel){
+  $name= $hotel['name'];
+  $description= $hotel['description'];
+  $parking= $hotel['parking'];
+  $vote= $hotel['vote'];
+  $distance_to_center= $hotel['distance_to_center'];
+  echo "<h2> $name $description $parking $vote  $distance_to_center  </h2>";
+
+
 };
 
 
@@ -54,11 +61,28 @@ foreach($hotels as $hotel){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>Document</title>
 </head>
 <body>
 
-<h2><?php echo $hotels ?> vediamo</h2>
+<div class="container mb-2 p-2 ">
+  <div class="">
+  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"> nome hotel:<?php echo "<h2> $name </h2>" ?></h5>
+    <p class="card-text"> descrizone hotel:<?php echo "<h2> $description </h2>" ?></p>
+    <p class="card-text"> voto hotel:<?php echo "<h2> $vote </h2>" ?></p>
+    <p class="card-text"> distanza dal centro storico:<?php echo "<h2> $distance_to_center </h2>" ?> M</p>
+    
+  </div>
+</div>
+
+  </div>
+
+</div>
+
+
   
 </body>
 </html>
